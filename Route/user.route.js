@@ -22,7 +22,7 @@ userRoute.post("/register",async(req,res)=>{
                 else{
                     const user=new userModel({name,email,gender,password:hash,age,city,is_married})
                     await user.save()
-                    res.status(200).json({msg:'User already exist, please login'})
+                    res.status(200).json({msg:'Registered'})
                 }
               })
         }
